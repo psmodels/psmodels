@@ -1,0 +1,3 @@
+LIBRARY vsc_3w_l_filter_sfun.mexw64
+EXPORTS
+mexFunction

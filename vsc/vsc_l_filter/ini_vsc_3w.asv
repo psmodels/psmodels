@@ -1,0 +1,16 @@
+F_b = 50.0;
+L_t = 1.25e-3;
+R_t = 0.1;
+L_s = 1.25e-3;
+R_s = 0.1;
+C_ac = 
+C_dc = 1e6;
+
+V_dc = 730.0;
+
+tau_ref = 0.005;
+K_p = L_s/tau_ref;
+K_i = R_s/tau_ref;
+
+vsc_ini = [0,0,V_dc];
+vsc_ctrl_ini = [0,0];
