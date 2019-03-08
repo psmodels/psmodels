@@ -7,6 +7,7 @@ splrj/
 # matlab
 *.mat
 *.csv
+results/
 
 # jupyter
 .ipynb_checkpoints
