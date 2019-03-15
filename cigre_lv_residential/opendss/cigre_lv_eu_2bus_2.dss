@@ -1,0 +1,38 @@
+Clear
+set defaultbasefreq=50
+
+New Circuit.Kersting6p1
+~                                    Bus1=R1   Basekv=0.4   pu=1.0   angle=0     phases=3  mvasc3=1000000000   Mvasc1=1250000000  
+New Vsource.SourceR10  Bus1=R10  BasekV=0.4  pu=1.0   angle=10                   mvasc3=1000000000   Mvasc1=1250000000  
+
+
+New LineCode.UG1 nphases=4  BaseFreq=50 
+~ rmatrix = (0.211 | 0.049 0.211 | 0.049000 0.049000 0.211 | 0.049000 0.049000 0.049000 0.211 )
+~ xmatrix = (0.747 | 0.673 0.747 | 0.651 0.673 0.747 | 0.673 0.651 0.673 0.747 )
+~ units=km 
+
+New Line.Line_R1_R10  Phases=4 Bus1=R1.1.2.3.4 Bus2=R10.1.2.3.4  LineCode=UG1 Length=0.315
+
+!  ~ debug=yes
+!New load.Bus2  phases=3   Model=0  bus1=R10  kV=(0.4 3 sqrt /)   kva=20 Pf=0.9 vmin=0.7
+
+Set voltagebases=[0.4]
+calcv
+
+set tolerance=0.0000001
+set maxiterations=100
+solve
+
+
+Show Powers kVA Elements
+
+Show Voltage LN Nodes
+Show Currents
+! show mismatch
+! Show convergence
+! Show Power kVA
+dump line.testline debug
+
+select line.1-2 
+show yprim
+

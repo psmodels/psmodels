@@ -1,0 +1,11 @@
+
+SYMMETRICAL COMPONENT CURRENTS BY CIRCUIT ELEMENT (first 3 phases)
+
+Element             Term      I1         I2         %I2/I1    I0         %I0/I1   %Normal %Emergency
+
+"VSOURCE.SOURCE" ..   1      702.26        56.92     8.11      2.5463     0.36      0.00     0.00
+   -                  2      702.26        56.92     8.11      2.5463     0.36      0.00     0.00
+"VSOURCE.SOURCER10"   1      702.26        56.92     8.11      2.5463     0.36      0.00     0.00
+   -                  2      702.26        56.92     8.11      2.5463     0.36      0.00     0.00
+"LINE.LINE_R1_R10"    1      702.26       56.921     8.11      2.5462     0.36    184.23   122.82
+   -                  2      702.26       56.921     8.11      2.5462     0.36      0.00     0.00
