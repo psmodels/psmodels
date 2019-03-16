@@ -1,0 +1,49 @@
+
+CIRCUIT ELEMENT POWER FLOW
+
+(Power Flow into element from indicated Bus)
+
+Power Delivery Elements
+
+  Bus Phase     kW     +j   kvar         kVA         PF
+
+ELEMENT = "Vsource.SOURCE"
+R1       1        54.5 +j   -138.9      149.2      -0.3654
+R1       2        50.2 +j   -160.2      167.9      -0.2987
+R1       3        72.5 +j   -154.0      170.2      -0.4257
+   TERMINAL TOTAL   177.1 +j   -453.1      486.5      -0.3641
+R1       0         0.0 +j      0.0        0.0       1.0000
+R1       0         0.0 +j      0.0        0.0       1.0000
+R1       0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL     0.0 +j      0.0        0.0       1.0000
+
+ELEMENT = "Vsource.SOURCER10"
+R10      1       -77.8 +j    127.3      149.2      -0.5215
+R10      2       -77.2 +j    149.1      167.9      -0.4599
+R10      3       -98.1 +j    139.1      170.2      -0.5764
+   TERMINAL TOTAL  -253.1 +j    415.5      486.5      -0.5203
+R10      0         0.0 +j      0.0        0.0       1.0000
+R10      0         0.0 +j      0.0        0.0       1.0000
+R10      0         0.0 +j      0.0        0.0       1.0000
+   TERMINAL TOTAL     0.0 +j      0.0        0.0       1.0000
+
+ELEMENT = "Line.LINE_R1_R10"
+R1       1       -54.5 +j    138.9      149.2      -0.3654
+R1       2       -50.2 +j    160.2      167.9      -0.2987
+R1       3       -72.5 +j    154.0      170.2      -0.4257
+R1       4        -0.0 +j      0.0        0.0      -0.1674
+   TERMINAL TOTAL  -177.1 +j    453.1      486.5      -0.3641
+R10      1        77.8 +j   -127.3      149.2      -0.5215
+R10      2        77.2 +j   -149.1      167.9      -0.4599
+R10      3        98.1 +j   -139.1      170.2      -0.5764
+R10      4        -0.0 +j     -0.0        0.0       0.9442
+   TERMINAL TOTAL   253.1 +j   -415.5      486.5      -0.5203
+
+= = = = = = = = = = = = = = = = = = =  = = = = = = = = = = =  = =
+
+Power Conversion Elements
+
+  Bus Phase     kW   +j  kvar         kVA         PF
+
+
+Total Circuit Losses =   76.0 +j   37.6

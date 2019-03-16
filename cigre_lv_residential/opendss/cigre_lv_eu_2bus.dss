@@ -1,0 +1,26 @@
+clear
+New circuit.cigre_lv
+
+
+Set DefaultBaseFrequency=50 
+Edit Vsource.Source1 Bus1=Source1 BasekV=0.4  pu=1   ISC3=30000000 ISC1=15000000
+!New Vsource.Source10  Bus1=R10  BasekV=0.4  pu=1  ISC3=30000000 ISC1=15000000
+
+New LineCode.UG1 nphases=4  BaseFreq=50 
+~ rmatrix = (0.211 | 0.049 0.211 | 0.049000 0.049000 0.211 | 0.049000 0.049000 0.049000 0.211 )
+~ xmatrix = (0.747 | 0.673 0.747 | 0.651 0.673 0.747 | 0.673 0.651 0.673 0.747 )
+~ units=km 
+
+New Line.Line_R1_R10  Phases=4 Bus1=R1.1.2.3.4 Bus2=R10.1.2.3.4  LineCode=UG1 Length=0.315
+! New Load.Load_GND Bus1=GND.1.2.3.4   Model=1 kv=0.4  kva=0  Pf=1 Vminpu=0.6 Vmaxpu=1.4 !daily=day
+!  ~ debug=yes
+New load.Bus2  phases=3   Model=0  bus1=2  kV=(12.47 3 sqrt /)   kva=2000 Pf=0.9 vmin=0.7
+
+Set Voltagebases=[0.4]
+calcv
+Solve
+
+
+
+Show Voltages LN Nodes
+
